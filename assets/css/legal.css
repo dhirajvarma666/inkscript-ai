@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a140f, #0e0b07);
+  color: #f5e6d3;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  color: #f5cba7;
+}
+
+p {
+  opacity: 0.85;
+  margin-top: 10px;
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,220,180,0.1);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  margin-top: 20px;
+}
+
+a {
+  color: #f5cba7;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;   /* changed from left → right */
+  padding: 10px 16px;
+  border-radius: 12px;
+
+  background: rgba(245, 230, 210, 0.08);
+  border: 1px solid rgba(245, 220, 190, 0.2);
+  backdrop-filter: blur(10px);
+
+  color: #f5e6d3;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+/* Hover effect */
+.back-btn:hover {
+  background: rgba(210, 170, 120, 0.15);
+  border-color: rgba(210, 170, 120, 0.6);
+  box-shadow: 0 0 20px rgba(210, 170, 120, 0.4);
+  transform: translateY(-2px);
+}

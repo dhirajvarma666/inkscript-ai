@@ -1,0 +1,117 @@
+/* Base reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+
+  /* ✅ SAME ESPRESSO LEGAL BACKGROUND */
+  background: radial-gradient(circle at top,
+    #1a140f,
+    #0e0b07);
+
+  color:#f5e6d3;
+}
+
+/* Back button (same style as legal pages) */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+
+  background: rgba(245, 230, 210, 0.08);
+  border: 1px solid rgba(245, 220, 190, 0.2);
+  backdrop-filter: blur(10px);
+
+  color: #f5e6d3;
+  text-decoration: none;
+
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.back-btn:hover{
+  background: rgba(210,170,120,0.2);
+}
+
+/* Container */
+.container{
+  text-align:center;
+  padding:100px 20px;
+}
+
+/* Title */
+h1{
+  font-size:2.8rem;
+  margin-bottom:10px;
+}
+
+/* Subtitle */
+.sub{
+  opacity:0.7;
+  margin-bottom:40px;
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* Card */
+.card{
+  text-decoration:none;
+  color:#f5e6d3;
+
+  padding:25px 20px;
+  border-radius:16px;
+
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,220,180,0.1);
+  backdrop-filter:blur(10px);
+
+  transition:0.3s ease;
+}
+
+/* Hover (subtle only) */
+.card:hover{
+  border-color:rgba(255,200,150,0.3);
+  transform:translateY(-5px);
+}
+
+/* Icon */
+.icon{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+/* Text */
+.card h3{
+  margin-top:10px;
+}
+
+.card p{
+  opacity:0.7;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:500px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}

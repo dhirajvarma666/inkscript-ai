@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InkScript AI • Writing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Josefin+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;500&family=Open+Sans:wght@300;400;600&family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600&family=Raleway:wght@400;500;600&family=Nunito:wght@400;500;600&family=Mulish:wght@400;500&family=Work+Sans:wght@400;500&family=DM+Sans:wght@400;500&family=Karla:wght@400;500&family=Manrope:wght@400;500&family=Urbanist:wght@400;500&family=Cabin:wght@400;500&family=Libre+Franklin:wght@400;500&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets\css\writing.css">
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+
+<header class="topbar">
+  <div class="logo">InkScript <span>AI</span></div>
+
+  <a href="home.html" class="back-btn">
+    ← Back
+  </a>
+</header>
+
+<section class="writing-layout">
+
+  <!-- LEFT -->
+  <aside class="controls-panel">
+
+    <div class="panel-card">
+
+      <div class="eyebrow">AI WRITING STUDIO</div>
+
+      <h2>Create Clean Assignment Pages</h2>
+
+      <!-- PAPER -->
+      <div class="field">
+        <label>Paper Type</label>
+
+        <div class="option-row">
+          <button class="toggle-btn active" data-paper="white">
+            White
+          </button>
+
+          <button class="toggle-btn" data-paper="ruled">
+            Ruled
+          </button>
+        </div>
+      </div>
+
+      <!-- INK -->
+      <div class="field">
+        <label>Ink Color</label>
+
+        <div class="option-row">
+          <button class="toggle-btn active" data-ink="#111111">
+            Black
+          </button>
+
+          <button class="toggle-btn" data-ink="#143d8f">
+            Blue
+          </button>
+        </div>
+      </div>
+
+      <!-- FONTS -->
+      <div class="field">
+
+        <label>Select Font</label>
+
+        <div class="font-scroll" id="fontScroll">
+
+          <button class="font-btn active" data-font="'Inter', sans-serif" style="font-family:Inter">Inter</button>
+
+          <button class="font-btn" data-font="'Poppins', sans-serif" style="font-family:Poppins">Poppins</button>
+
+          <button class="font-btn" data-font="'Roboto', sans-serif" style="font-family:Roboto">Roboto</button>
+
+          <button class="font-btn" data-font="'Open Sans', sans-serif" style="font-family:'Open Sans'">Open Sans</button>
+
+          <button class="font-btn" data-font="'Lato', sans-serif" style="font-family:Lato">Lato</button>
+
+          <button class="font-btn" data-font="'Montserrat', sans-serif" style="font-family:Montserrat">Montserrat</button>
+
+          <button class="font-btn" data-font="'Raleway', sans-serif" style="font-family:Raleway">Raleway</button>
+
+          <button class="font-btn" data-font="'Nunito', sans-serif" style="font-family:Nunito">Nunito</button>
+
+          <button class="font-btn" data-font="'Mulish', sans-serif" style="font-family:Mulish">Mulish</button>
+
+          <button class="font-btn" data-font="'Work Sans', sans-serif" style="font-family:'Work Sans'">Work Sans</button>
+
+          <button class="font-btn" data-font="'DM Sans', sans-serif" style="font-family:'DM Sans'">DM Sans</button>
+
+          <button class="font-btn" data-font="'Karla', sans-serif" style="font-family:Karla">Karla</button>
+
+          <button class="font-btn" data-font="'Manrope', sans-serif" style="font-family:Manrope">Manrope</button>
+
+          <button class="font-btn" data-font="'Urbanist', sans-serif" style="font-family:Urbanist">Urbanist</button>
+
+          <button class="font-btn" data-font="'Cabin', sans-serif" style="font-family:Cabin">Cabin</button>
+
+          <button class="font-btn" data-font="'Libre Franklin', sans-serif" style="font-family:'Libre Franklin'">Libre Franklin</button>
+
+          <button class="font-btn" data-font="'Figtree', sans-serif" style="font-family:Figtree">Figtree</button>
+
+        </div>
+
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="action-row">
+
+        <button class="ghost-btn" id="previewBtn">
+          Preview
+        </button>
+
+        <button class="primary-btn" id="downloadBtn">
+          Download PDF
+        </button>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- RIGHT -->
+  <main class="editor-side">
+
+    <div class="editor-paper" id="paper">
+
+      <div class="ruled-lines" id="ruledLines"></div>
+
+      <textarea
+        id="editor"
+        spellcheck="false"
+        placeholder="Enter your text..."
+      ></textarea>
+
+    </div>
+
+  </main>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="assets\js\writing.js"></script>
+
+</body>
+</html>

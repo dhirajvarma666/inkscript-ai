@@ -1,0 +1,217 @@
+/* Removes default browser spacing */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Coffee cinematic environment */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(245,220,190,0.25) 0%,
+    rgba(120,85,55,0.55) 20%,
+    rgba(45,30,20,0.92) 60%,
+    #120b08 100%);
+}
+
+/* Hanging wire above bulb (now coffee toned) */
+.wire{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:3px;
+    height:calc(50vh - 55px);
+    background:linear-gradient(to bottom,#b08968,#3b2a20);
+    z-index:1;
+}
+
+/* Coffee warm glowing bulb */
+.bulb{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:75px;
+    height:110px;
+    z-index:2;
+
+    background:
+    radial-gradient(circle at 50% 35%,
+    rgba(255,248,235,0.96) 0%,
+    rgba(255,236,210,0.96) 18%,
+    rgba(235,200,160,0.92) 45%,
+    rgba(200,150,110,0.72) 70%,
+    rgba(160,110,70,0.35) 100%);
+
+    border-radius:
+    50% 50% 45% 45% /
+    55% 55% 42% 42%;
+
+    border:1px solid rgba(255,240,220,0.18);
+
+    backdrop-filter:blur(2px);
+
+    box-shadow:
+    0 0 10px rgba(210,170,120,0.9),
+    0 0 30px rgba(200,150,100,0.8),
+    0 0 60px rgba(180,130,80,0.65),
+    0 0 120px rgba(160,110,70,0.35),
+    0 0 220px rgba(140,90,60,0.15);
+}
+
+/* Metallic holder (coffee bronze tone) */
+.bulb::before{
+    content:"";
+    position:absolute;
+    top:-22px;
+    left:50%;
+    transform:translateX(-50%);
+    width:34px;
+    height:28px;
+
+    border-radius:6px 6px 2px 2px;
+
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        #c49a6c 0px,
+        #a67c52 4px,
+        #7a5a3a 8px
+    );
+}
+
+/* Warm filament glow */
+.bulb::after{
+    content:"";
+    position:absolute;
+    top:28px;
+    left:50%;
+    transform:translateX(-50%);
+    width:24px;
+    height:38px;
+
+    border-bottom:3px solid rgba(255,220,170,0.95);
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 8px rgba(220,170,120,0.9),
+    0 0 18px rgba(200,150,100,0.6);
+}
+
+/* Coffee ambient glow */
+.light{
+    position:absolute;
+    width:800px;
+    height:800px;
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(245,210,170,0.18) 0%,
+    rgba(210,170,130,0.06) 40%,
+    transparent 75%);
+
+    z-index:0;
+}
+
+/* Scene container unchanged */
+.scene{
+    width:500px;
+    height:500px;
+    perspective:1400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:5;
+}
+
+/* Carousel unchanged */
+.carousel{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    animation:rotate 14s infinite linear;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@keyframes rotate{
+    from{ transform:rotateY(0deg); }
+    to{ transform:rotateY(360deg); }
+}
+
+/* Cards → coffee glass style */
+.card{
+    position:absolute;
+    width:210px;
+    height:260px;
+    border-radius:18px;
+    padding:15px;
+    text-align:center;
+    cursor:pointer;
+
+    background:rgba(245,230,210,0.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(245,220,190,0.15);
+
+    box-shadow:
+    0 10px 25px rgba(20,10,5,0.45);
+
+    transition:all 0.45s ease;
+}
+
+/* Hover coffee glow */
+.card:hover{
+    transform:scale(1.12) translateY(-15px);
+
+    border:1px solid rgba(210,170,120,0.7);
+
+    background:rgba(245,230,210,0.14);
+
+    box-shadow:
+    0 20px 40px rgba(20,10,5,0.7),
+    0 0 20px rgba(210,170,120,0.5),
+    0 0 50px rgba(180,130,80,0.3);
+}
+
+/* Images unchanged */
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* Text → coffee cream tone */
+.card h3{
+    margin-top:12px;
+    color:#f5e6d3;
+    font-size:22px;
+}
+
+.card p{
+    margin-top:6px;
+    color:#d8c3a5;
+    font-size:14px;
+}
+
+/* Positions unchanged */
+.card:nth-child(1){ transform:rotateY(0deg) translateZ(380px); }
+.card:nth-child(2){ transform:rotateY(90deg) translateZ(380px); }
+.card:nth-child(3){ transform:rotateY(180deg) translateZ(380px); }
+.card:nth-child(4){ transform:rotateY(270deg) translateZ(380px); }
