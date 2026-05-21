@@ -57,3 +57,11 @@ form.addEventListener('submit', (e) => {
   }
 
 });
+
+email.addEventListener('input', () => {
+  emailError.textContent = '';
+});
+
+password.addEventListener('input', () => {
+  passwordError.textContent = '';
+});

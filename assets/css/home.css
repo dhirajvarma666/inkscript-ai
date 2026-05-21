@@ -1102,6 +1102,7 @@ section { position: relative; z-index: 1; }
   .process-grid    { grid-template-columns: repeat(2,1fr); gap: 32px; }
   .nav-links       { display: none; }
   .morph-preview   { display: none; }
+  .hero-pen-deco   { display: none; }
 }
 
 @media (max-width: 600px) {

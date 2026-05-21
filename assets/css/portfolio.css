@@ -142,7 +142,6 @@ body{
     height:100%;
     position:relative;
     transform-style:preserve-3d;
-    animation:rotate 14s infinite linear;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -154,10 +153,17 @@ body{
 }
 
 /* Cards → coffee glass style */
-.card{
+.card-wrapper{
     position:absolute;
     width:210px;
     height:260px;
+    transform-style:preserve-3d;
+}
+
+.card{
+    position:relative;
+    width:100%;
+    height:100%;
     border-radius:18px;
     padding:15px;
     text-align:center;
@@ -210,8 +216,49 @@ body{
     font-size:14px;
 }
 
-/* Positions unchanged */
-.card:nth-child(1){ transform:rotateY(0deg) translateZ(380px); }
-.card:nth-child(2){ transform:rotateY(90deg) translateZ(380px); }
-.card:nth-child(3){ transform:rotateY(180deg) translateZ(380px); }
-.card:nth-child(4){ transform:rotateY(270deg) translateZ(380px); }
+/* Position wrappers and rotate them with billboard counter-rotation */
+.card-wrapper:nth-child(1){ animation: rotateCard1 14s infinite linear; }
+.card-wrapper:nth-child(2){ animation: rotateCard2 14s infinite linear; }
+.card-wrapper:nth-child(3){ animation: rotateCard3 14s infinite linear; }
+.card-wrapper:nth-child(4){ animation: rotateCard4 14s infinite linear; }
+
+@keyframes rotateCard1 {
+    0% { transform: rotateY(0deg) translateZ(380px) rotateY(0deg); }
+    100% { transform: rotateY(360deg) translateZ(380px) rotateY(-360deg); }
+}
+@keyframes rotateCard2 {
+    0% { transform: rotateY(90deg) translateZ(380px) rotateY(-90deg); }
+    100% { transform: rotateY(450deg) translateZ(380px) rotateY(-450deg); }
+}
+@keyframes rotateCard3 {
+    0% { transform: rotateY(180deg) translateZ(380px) rotateY(-180deg); }
+    100% { transform: rotateY(540deg) translateZ(380px) rotateY(-540deg); }
+}
+@keyframes rotateCard4 {
+    0% { transform: rotateY(270deg) translateZ(380px) rotateY(-270deg); }
+    100% { transform: rotateY(630deg) translateZ(380px) rotateY(-630deg); }
+}
+
+/* Back button style */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(245, 230, 210, 0.08);
+  border: 1px solid rgba(245, 220, 190, 0.2);
+  backdrop-filter: blur(10px);
+  color: #f5e6d3;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+.back-btn:hover {
+  background: rgba(210, 170, 120, 0.15);
+  border-color: rgba(210, 170, 120, 0.6);
+  box-shadow: 0 0 20px rgba(210, 170, 120, 0.4);
+  transform: translateY(-2px);
+}

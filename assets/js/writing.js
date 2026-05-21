@@ -6,7 +6,7 @@ const fontBtns = document.querySelectorAll('.font-btn');
 
 let currentPaper = 'white';
 let currentInk = '#111111';
-let currentFont = "'Inter', sans-serif";
+let currentFont = "'Caveat', cursive";
 
 /* PAPER */
 
@@ -73,6 +73,9 @@ document.getElementById('previewBtn').addEventListener('click', () => {
     <html>
     <head>
       <title>Preview</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Indie+Flower&family=Architects+Daughter&family=Shadows+Into+Light&family=Just+Another+Hand&family=Gochi+Hand&family=Homemade+Apple&family=Dancing+Script:wght@400;700&family=Satisfy&family=Reenie+Beanie&display=swap" rel="stylesheet">
 
       <style>
 
