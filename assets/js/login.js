@@ -52,7 +52,7 @@ form.addEventListener('submit', (e) => {
 
     alert('Login Successful');
 
-    form.reset();
+    window.location.href = 'writing.html';
 
   }
 
